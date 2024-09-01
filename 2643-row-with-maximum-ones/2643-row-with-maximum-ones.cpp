@@ -1,11 +1,10 @@
 class Solution {
 public:
     vector<int> rowAndMaximumOnes(vector<vector<int>>& mat) {
-        vector<int>ans;
+       vector<int>ans;
         int n=mat.size();
-        int oneCount=INT_MIN;
-        int rowNo=-1;
-        
+        int row;
+        int one=INT_MIN;
         for(int i=0;i<n;i++)
         {
             int count=0;
@@ -16,15 +15,14 @@ public:
                     count++;
                 }
             }
-            if(count>oneCount)
-            {
-                oneCount=count;
-                rowNo=i;
+            if(count>one){
+                one=count;
+                row=i;
             }
         }
         
-        ans.push_back(rowNo);
-        ans.push_back(oneCount);
+        ans.push_back(row);
+        ans.push_back(one);
         return ans;
     }
 };
