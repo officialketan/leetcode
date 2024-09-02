@@ -12,6 +12,7 @@ public:
                 {
                     arr.push_back(i);
                     arr.push_back(j);
+                    break;
                 }
             }
         }
