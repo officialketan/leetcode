@@ -1,5 +1,5 @@
 class Solution {
-public:
+public: 
     string decodeMessage(string key, string message) {
         char start='a';
         char mapping[300]={0};
@@ -14,9 +14,9 @@ public:
         }
         string ans;
         
-        for(int i=0;i<message.length();i++)
+        for(char ch : message)
         {
-            char ch=message[i];
+            //char ch=message[i];
             if(ch==' ')
             {
                 ans.push_back(' ');
