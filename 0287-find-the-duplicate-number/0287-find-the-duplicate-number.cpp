@@ -19,20 +19,27 @@ public:
 //         }
 //         return no;
         
-        int ans=0;
-        for(int i=0;i<nums.size();i++)
-        {
-            int index=abs(nums[i]);
-            if(nums[index]<0)
-            {
-                ans=index;
-                break;
-            }
+//         int ans=0;
+//         for(int i=0;i<nums.size();i++)
+//         {
+//             int index=abs(nums[i]);
+//             if(nums[index]<0)
+//             {
+//                 ans=index;
+//                 break;
+//             }
             
-            nums[index] *=-1;
+//             nums[index] *=-1;
+//         }
+        
+//         return ans;
+        
+        
+        while(nums[0]!=nums[nums[0]])
+        {
+            swap(nums[0],nums[nums[0]]);
+            
         }
-        
-        return ans;
-        
+        return nums[0];
     }
 };
